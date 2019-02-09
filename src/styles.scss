@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: auto;
+
+  button {
+    background-color: transparent;
+    padding: 0.25rem 0.5rem;
+    font-size: inherit;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: auto;
+      color: gray;
+    }
+  }
+}

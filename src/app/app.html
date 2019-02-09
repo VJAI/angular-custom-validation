@@ -1,0 +1,20 @@
+<h1>Validation in Custom Form Components</h1>
+
+<p>
+	The goal of this sample is to demonstrate how to achieve displaying validation error messages inside a custom component.
+</p>
+
+<form style="margin-top: 2rem" #form="ngForm">
+	<app-custom-textbox
+		name="userName"
+		label="User Name"
+		placeholder="Please enter your user name"
+		minlength="3"
+		[required]="true"
+	  ngModel>
+	</app-custom-textbox>
+
+	<p>
+		<button type="submit" [disabled]="form.invalid">Submit</button>
+	</p>
+</form>

@@ -1,0 +1,16 @@
+<div class="input-wrapper" [class.required]="required">
+	<label>{{label}}</label>
+	<input type="text"
+	       [required]="required"
+	       [disabled]="disabled"
+	       [minlength]="minlength"
+	       [placeholder]="placeholder"
+	       [(ngModel)]="data"
+	       [ngModelOptions]="{standalone: true}"
+	       (input)="onChange()"
+	       (change)="onChange()"
+	       (blur)="onTouchedFn()"/>
+	<div class="error-message" *ngIf="showError">
+		{{errors[0]}}
+	</div>
+</div>
